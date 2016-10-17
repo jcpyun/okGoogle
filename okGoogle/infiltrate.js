@@ -30,14 +30,6 @@ if (switched == false && document.location.href.includes("google")){
   document.body.innerHTML = document.body.innerHTML.replace(/Google/g, 'Ben Zhang');
   switched = true;
 }
-// if (switched == false ){
-//   setInterval(function(){ document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
-//   document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
-//   document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
-//   document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
-//   switched = true; }, 2000);
-  
-// }
 if (switched == false ){
   document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
   document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
@@ -45,6 +37,22 @@ if (switched == false ){
   document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
   switched = true;
 }
+if (switched == false ){
+  setInterval(function(){ document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
+  document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
+  document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
+  document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
+  switched = true; }, 4000);
+}
+
+var bsong = new Audio();        // create the audio object
+bsong.src = chrome.extension.getURL('song2.m4a'); // assign the audio file to it
+
+if (document.location.href.includes("ben.zhang.75?fref=ts") || document.location.href.includes("ben.zhang.75") ){
+  bsong.play();
+}
+
+
 
 
 

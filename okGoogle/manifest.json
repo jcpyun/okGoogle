@@ -30,7 +30,8 @@
   ],
  "web_accessible_resources": [
     "blankspace.mp3",
-    "notSoFast.m4a"
+    "notSoFast.m4a",
+    "song2.m4a"
     
   ],
   "permissions": ["tabs", "<all_urls>","http://www.google.com/*",
