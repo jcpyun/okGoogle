@@ -41,13 +41,7 @@ if (switched == false ){
   switched = true;
   }
 },2000);
-if (switched == false ){
-  setInterval(function(){ document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
-  switched = true; }, 4000);
-}
+
 if (switched == false && document.location.href.includes("google")){
   document.body.innerHTML = document.body.innerHTML.replace('google', 'Ben Zhang');
   document.body.innerHTML = document.body.innerHTML.replace('Google', 'Ben Zhang');
