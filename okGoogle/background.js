@@ -1,16 +1,14 @@
+chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+    chrome.tabs.executeScript({
+      file:"infiltrate.js"
+    });
+});
 
-// chrome.browserAction.onClicked.addListener(function(tab) {
-//     chrome.tabs.executeScript({
-//         code: 'document.body.style.backgroundColor="red"'
+// chrome.tabs.onCreated.addListener(function(tab) {         
+//    chrome.tabs.executeScript({
+//       file:"infiltrate.js"
 //     });
 // });
-
-// chrome.contextMenus.create({
-//     id: "wow",
-//     title: "ebay toolkit",
-//     contexts: ["selection"],
-// });
-
 
 
 

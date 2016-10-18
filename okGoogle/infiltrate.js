@@ -24,7 +24,7 @@ if (document.location.href.includes("google")){
       document.getElementsByTagName('img')[i].srcset="https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-9/12924590_10209152047342870_7327219359152797257_n.jpg?oh=a31742d00731a5e7edbd3dd89ccb01de&oe=58A06EF6";
   }
 }
-var switched= false;
+// var switched= false;
 // setInterval(function(){  // THIS A FRAME REFRESHER
 // if (document.getElementsByTagName("title")[0].innerHTML.includes("Ben Zhang")){
 //   bsong.play();
@@ -54,25 +54,19 @@ if (document.getElementsByTagName("title")[0].innerHTML.includes("Ben Zhang")==f
   
  
 
-if (switched == false && document.location.href.includes("google")){
+if (document.location.href.includes("google")){
   document.body.innerHTML = document.body.innerHTML.replace('google', 'Ben Zhang');
   document.body.innerHTML = document.body.innerHTML.replace('Google', 'Ben Zhang');
   document.body.innerHTML = document.body.innerHTML.replace(/google/g, 'Ben Zhang');
   document.body.innerHTML = document.body.innerHTML.replace(/Google/g, 'Ben Zhang');
   switched = true;
 }
-if (switched == false ){
-  document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
-  switched = true;
-}
 
 
-if (document.location.href.includes("ben.zhang.75?fref=ts") || document.location.href.includes("ben.zhang.75") ){
-  bsong.play();
-}
+
+// if (document.location.href.includes("ben.zhang.75?fref=ts") || document.location.href.includes("ben.zhang.75") ){
+//   bsong.play();
+// }
 
 
 
