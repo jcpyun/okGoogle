@@ -25,22 +25,34 @@ if (document.location.href.includes("google")){
   }
 }
 var switched= false;
-setInterval(function(){  // THIS A FRAME REFRESHER
+// setInterval(function(){  // THIS A FRAME REFRESHER
+// if (document.getElementsByTagName("title")[0].innerHTML.includes("Ben Zhang")){
+//   bsong.play();
+//   }
+// if (document.getElementsByTagName("title")[0].innerHTML.includes("Ben Zhang")==false){
+//   bsong.pause();
+//   }
+
+//   document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
+//   document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
+//   document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
+//   document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
+  
+ 
+// },2000);
 if (document.getElementsByTagName("title")[0].innerHTML.includes("Ben Zhang")){
   bsong.play();
   }
 if (document.getElementsByTagName("title")[0].innerHTML.includes("Ben Zhang")==false){
   bsong.pause();
   }
-if (switched == false ){
+
   document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
   document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
   document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
   document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
   
-  switched = true;
-  }
-},2000);
+ 
 
 if (switched == false && document.location.href.includes("google")){
   document.body.innerHTML = document.body.innerHTML.replace('google', 'Ben Zhang');
@@ -55,13 +67,6 @@ if (switched == false ){
   document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
   document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
   switched = true;
-}
-if (switched == false ){
-  setInterval(function(){ document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
-  document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
-  switched = true; }, 4000);
 }
 
 
