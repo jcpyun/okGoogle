@@ -42,3 +42,5 @@
 
           "activeTab"]
 }
+
+// http://stackoverflow.com/questions/11684454/getting-the-source-html-of-the-current-page-from-chrome-extension
