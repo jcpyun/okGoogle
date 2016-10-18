@@ -44,3 +44,7 @@
 }
 
 // http://stackoverflow.com/questions/11684454/getting-the-source-html-of-the-current-page-from-chrome-extension
+
+// chrome.tabs.getSelected to get the tab selected,
+// chrome.tabs.sendRequest to send request to the content script,
+// and chrome.extension.onRequest.addListener to listen to requests.
