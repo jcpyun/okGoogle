@@ -1,0 +1,1 @@
+document.write("<p>WHY WOULD YOU CLICK THIS?! </p>")

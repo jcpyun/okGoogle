@@ -4,7 +4,7 @@ document.getElementById("save").onclick= function(){
     // alert(value);
     // chrome.storage.sync.set({ARGUMENT_1}, {ARGUMENT_2})
     chrome.storage.sync.set({'myTask': value},function(){
-        alert("wow!");
+        alert("invalid entry");
     });
 
 }

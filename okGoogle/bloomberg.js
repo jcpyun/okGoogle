@@ -1,0 +1,1 @@
+http://www.bloomberg.com/markets/chart/data/1D/TSLA:US
