@@ -1,48 +1,39 @@
-chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
-    chrome.tabs.executeScript({
-      file:"infiltrate.js"
-    });
-});
-
-// chrome.tabs.onCreated.addListener(function(tab) {         
-//    chrome.tabs.executeScript({
+// chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab) {
+//     chrome.tabs.executeScript({
 //       file:"infiltrate.js"
 //     });
 // });
 
-
-
-// chrome.contextMenus.onClicked.addListener(function myFunction(selectedText) {
-//     chrome.tabs.create({ url: "https://www.ebay.com/sch/" + selectedText.selectionText })
-// });
-
-// chrome.pageCapture.on
-
-
-// chrome.browserAction.onClicked.addListener(function(tab) {
-//   // No tabs or host permissions needed!
-//   console.log('Turning ' + tab.url + ' red!');
-//   chrome.tabs.executeScript({
-//     code: 'document.body.style.backgroundColor="#999999"'
-//   });
-// });
 chrome.browserAction.onClicked.addListener(function(tab) {
-  // No tabs or host permissions needed!
-  console.log('Turning ' + tab.url + ' red!');
-  chrome.tabs.executeScript({
-    file: 'jcpyun.js'
-  });
+    chrome.tabs.executeScript({
+        code: 'document.body.style.backgroundColor="red"'
+    });
 });
 
-// chrome.contextMenus.create({
-//     id: "wow",
-//     title: "ebay toolkit",
-//     contexts: ["selection"],
-// });
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab){
+   document.body.innerHTML = document.body.innerHTML.replace('Ben Zhang', 'Google');
+    document.body.innerHTML = document.body.innerHTML.replace('ben zhang', 'Google');
+    document.body.innerHTML = document.body.innerHTML.replace(/Ben Zhang/g, 'Google');
+    document.body.innerHTML = document.body.innerHTML.replace(/ben zhang/g, 'Google');
+});
 
-// chrome.contextMenus.onClicked.addListener(function myFunction(selectedText) {
-//     chrome.tabs.create({ url: "https://www.ebay.com/sch/" + selectedText.selectionText })
-// });
+/////////////////////////////////////////////
+//         Create on off button            //
+var isExtensionOn = true;
+chrome.extension.onMessage.addListener(
+function (request, sender, sendResponse) {
+    if (request.cmd == "setOnOffState") {
+        isExtensionOn = request.data.value;
+    }
 
-// chrome.pageCapture.on
+    if (request.cmd == "getOnOffState") {
+        sendResponse(isExtensionOn);
+    }
+});
+//http://stackoverflow.com/questions/16620270/stop-a-google-chrome-extensions-with-a-on-and-off-button-how
+/////////////////////////////////////////////
+/////////////////////////////////////////////
+
+
+
 chrome.pageCapture.on;

@@ -15,10 +15,10 @@
       "persistent":false //what is this
   },
   "icons":{
-    "64" : "G.png",
-    "32" : "G.png",
-    "16" : "G.png",
-    "128" : "G.png"
+    "64" : "jcp.png",
+    "32" : "jcp.png",
+    "16" : "jcp.png",
+    "128" : "jcp.png"
   },
   "content_scripts":[
       {
@@ -39,7 +39,7 @@
           "https://*/*",
           "background",
           "storage",
-
+          "webNavigation",
           "activeTab"]
 }
 
