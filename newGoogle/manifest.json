@@ -1,0 +1,54 @@
+{
+  "name": "jcp environment",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "better browsing capability",
+  "browser_action": {
+    "default_icon": "G.png",
+    "default_popup": "pop.html"
+  },
+  "chrome_url_overrides" : {
+    "newtab": "tab.html"
+  },
+  "background": {
+      "scripts":["background.js","jquery-3.1.0.js","infiltrate.js","clicked.js"],
+      "persistent":false //what is this
+  },
+  "icons":{
+    "64" : "jcp.png",
+    "32" : "jcp.png",
+    "16" : "jcp.png",
+    "128" : "jcp.png"
+  },
+  "content_scripts":[
+      {
+          "matches": ["http://*/*", "https://*/*","http://jquery.com/*","<all_urls>"],
+          // "css":["bs/css/bootstrap.min.css"],
+          "css": [],
+          "js": ["jquery-3.1.0.js","infiltrate.js","clicked.js"]
+      }
+  ],
+ "web_accessible_resources": [
+    "blankspace.mp3",
+    "notSoFast.m4a",
+    "song2.m4a"
+    
+  ],
+  "permissions": ["tabs", "<all_urls>","http://www.google.com/*",
+          "http://*/*",
+          "https://*/*",
+          "background",
+          "storage",
+          "webNavigation",
+          "activeTab"]
+}
+
+// http://stackoverflow.com/questions/19941866/document-write-overwriting-the-document
+
+// http://stackoverflow.com/questions/11996053/detect-a-button-click-in-the-browser-action-form-of-a-google-chrome-extension
+
+// http://stackoverflow.com/questions/11684454/getting-the-source-html-of-the-current-page-from-chrome-extension
+
+// chrome.tabs.getSelected to get the tab selected,
+// chrome.tabs.sendRequest to send request to the content script,
+// and chrome.extension.onRequest.addListener to listen to requests.
